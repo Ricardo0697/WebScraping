@@ -1,0 +1,24 @@
+{
+  "name": "webscraping-python",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ricardo0697/WebScraping-Python.git"
+  },
+  "author": "Ricardo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ricardo0697/WebScraping-Python/issues"
+  },
+  "homepage": "https://github.com/Ricardo0697/WebScraping-Python#readme",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "cheerio": "^1.0.0-rc.10",
+    "express": "^4.17.1"
+  }
+}
