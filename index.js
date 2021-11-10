@@ -11,12 +11,17 @@ axios(URLONE)
         //    console.log(html)
         const $ = cheerio.load(html)
         const articles = []
-        $('.REPEATERROW', html).each(function () {
+        const oldarticles = articles
+        $('.REPEATERROW', html).each(function (i) {
             const text = $(this).text()
-            // const tag = $(this).find('tr').attr()
-            articles.push({ text })
+            articles.push({ i , text })
+            if(articles[i] == oldarticles[i]){
+                console.log('no hubieron Cambios')
+            }else{
+                console.log('Existen Cambios ' , URLONE);
+            }
         })
-        console.log(articles , articles.length)
+        console.log(articles , oldarticles.length)
     }).catch(err => console.log(err, 'error al intentar Ingresar a la web'))
 
 app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`))
