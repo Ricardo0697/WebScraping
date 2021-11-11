@@ -10,7 +10,6 @@ const URLTWO = 'https://www.cso.go.cr/legislacion/directrices.aspx'
 axios(URLONE)
     .then(response => {
         const html = response.data
-        //    console.log(html)
         const $ = cheerio.load(html)
         const articles = []
         const oldarticles = articles
@@ -18,7 +17,7 @@ axios(URLONE)
             const text = $(this).text()
             articles.push({ i , text })
             if(articles[i] == oldarticles[i]){
-                console.log('no hubieron Cambios')
+                console.log('no hubo Cambios')
             }else{
                 console.log('Existen Cambios ' , URLONE);
             }
@@ -29,6 +28,7 @@ axios(URLTWO).then(response => {
     const html = response.data 
     const $ = cheerio.load(html)
     const articles = []
+
     const oldarticles = articles
     $('.REPEATERROW' , html).each( function(i){
         const text = $(this).text()
