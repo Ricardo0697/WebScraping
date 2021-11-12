@@ -3,6 +3,7 @@ const axios = require('axios')
 const cheerio = require('cheerio')
 const { response } = require('express')
 const express = require('express')
+const {Builder, By, Key, until} = require('selenium-webdriver');
 
 const app = express()
 const URLONE = 'https://www.cso.go.cr/legislacion/criterios_tecnicos.aspx';
@@ -42,3 +43,16 @@ axios(URLTWO).then(response => {
     console.log(articles , oldarticles.length);
 }).catch(err => console.log(err, 'error al intentar Ingresar a la web') )
 app.listen(PORT, () => console.log(`Server is running on PORT ${PORT}`))
+
+
+
+// (async () => {
+//         let driver = await new Builder().forBrowser('firefox').build()
+//         try {
+//             await driver.get('http://www.google.com/ncr')
+//             await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN)
+//             await driver.wait(until.titleIs('webdriver - Google Search'), 1000)
+//         } finally {
+//             await driver.quit()
+//         }
+//     })();
