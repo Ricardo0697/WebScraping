@@ -119,3 +119,30 @@ print(tj)
 
 
 
+tup = (1 , 2 ,4 , 8)
+
+tup = tup[-2:-1]
+tup = tup[-1]
+print(tup , ' tup')
+
+# dd = {"1":"0" , "0":"1"}
+# for x in dd.vals():
+#     print(x, end="") el codigo es erroneo ya que no contiene el metodo vals
+
+
+# dt = {}
+# dt['1'] = (1,2)
+# dt['2'] = (2,1)
+#
+# for v in dt.keys():
+#     print(dt[x][1])
+
+def ejercicio29(inp=2, out=3):
+    return inp * out;
+print(ejercicio29(out=2))
+
+lissa = [[x for x in range(3)] for y in range(3)]
+for r in range(3):
+    for c in range(3):
+        if lissa[r][c] % 2 !=0:
+            print("#")
