@@ -114,5 +114,8 @@ for k in range(len(dct)):
 
 print(v , ' pregunta 21')
 
+tj = [i for i in range(-1, -2)]
+print(tj)
+
 
 
